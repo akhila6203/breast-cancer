@@ -1,0 +1,11 @@
+export { default as HomePage } from "./HomePage";
+export { default as AboutPage } from "./AboutPage";
+export { default as ServicesPage } from "./ServicesPage";
+export { default as ServiceDetailPage } from "./ServiceDetailPage";
+export { default as TeamPage } from "./TeamPage";
+export { default as BreastCancerPage } from "./BreastCancerPage";
+export { default as BlogsPage } from "./BlogsPage";
+export { default as PatientCarePage } from "./PatientCarePage";
+export { default as ContactPage } from "./ContactPage";
+export { default as AppointmentsPage } from "./AppointmentsPage";
+export { default as NotFoundPage } from "./NotFoundPage";
