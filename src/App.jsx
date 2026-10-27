@@ -6,13 +6,13 @@ import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
 import {
   HomePage,
-  AboutPage,
-  ServicesPage,
-  ServiceDetailPage,
-  TeamPage,
-  BreastCancerPage,
+  // AboutPage,
+  // ServicesPage,
+  // ServiceDetailPage,
+  // TeamPage,
+  // BreastCancerPage,
   PatientCarePage,
-  BlogsPage,
+  // BlogsPage,
   ContactPage,
   AppointmentsPage,
   NotFoundPage,
@@ -47,12 +47,12 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/services/:slug" element={<ServiceDetailPage />} />
-        <Route path="/our-team" element={<TeamPage />} />
-        <Route path="/breast-cancer" element={<BreastCancerPage />} />
-        <Route path="/blogs" element={<BlogsPage />} />
+        {/* <Route path="/about" element={<AboutPage />} /> */}
+        {/* <Route path="/services" element={<ServicesPage />} /> */}
+        {/* <Route path="/services/:slug" element={<ServiceDetailPage />} /> */}
+        {/* <Route path="/our-team" element={<TeamPage />} /> */}
+        {/* <Route path="/breast-cancer" element={<BreastCancerPage />} /> */}
+        {/* <Route path="/blogs" element={<BlogsPage />} /> */}
         <Route path="/patient-care" element={<PatientCarePage />} />\
         <Route
   path="/patient-care/:programme"
