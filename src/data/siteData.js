@@ -1,7 +1,14 @@
 import { serviceDetailContent } from "./serviceDetails";
 import breastBanner from "../assets/home/breast-banner.png";
 import diagnosisBanner from "../assets/home/diagnosisBanner.jpg";
-import treatmentBanner from "../assets/home/treatmentBanner1.jpg";
+import treatmentBanner from "../assets/home/treatmentBanner3.jpg";
+
+import breastScreening from "../assets/home/breast-screening.jpg";
+import diagnosticImaging from "../assets/home/diagnostic-imaging.jpg";
+import surgicalOncology from "../assets/home/surgical-oncology.jpg";
+import medicalOncology from "../assets/home/medical-oncology.jpg";
+import radiationOncology from "../assets/home/radiation-oncology.jpg";
+import patientSupport from "../assets/home/patient-support.jpg";
 
 export const hospital = {
   name: "RENOVA",
@@ -51,13 +58,16 @@ export const navigation = [
   { label: "Contact Us", path: "/contact" },
 ];
 
+
+
 export const services = [
   {
     slug: "breast-cancer-screening",
     title: "Breast Cancer Screening",
     description:
       "Learn about mammography, clinical examinations and screening options that depend on age, risk and local guidance.",
-    icon: "ScanSearch",
+    image:
+      breastScreening,
     path: "/services/breast-cancer-screening",
     detail: serviceDetailContent["breast-cancer-screening"],
   },
@@ -66,7 +76,8 @@ export const services = [
     title: "Diagnostic Imaging",
     description:
       "Understand how mammography, ultrasound and, when indicated, MRI help clinicians look more closely at breast changes.",
-    icon: "Activity",
+    image:
+      diagnosticImaging,
     path: "/services/diagnostic-imaging",
     detail: serviceDetailContent["diagnostic-imaging"],
   },
@@ -75,7 +86,8 @@ export const services = [
     title: "Surgical Oncology",
     description:
       "Explore breast-conserving surgery, mastectomy and oncoplastic approaches, chosen according to clinical need and preference.",
-    icon: "HeartPulse",
+    image:
+      surgicalOncology,
     path: "/services/surgical-oncology",
     detail: serviceDetailContent["surgical-oncology"],
   },
@@ -84,7 +96,8 @@ export const services = [
     title: "Medical Oncology",
     description:
       "Learn about chemotherapy, hormone therapy and targeted medicines that may form part of an individual treatment plan.",
-    icon: "Stethoscope",
+    image:
+     medicalOncology,
     path: "/services/medical-oncology",
     detail: serviceDetailContent["medical-oncology"],
   },
@@ -93,7 +106,8 @@ export const services = [
     title: "Radiation Oncology",
     description:
       "Understand how radiotherapy may be used after surgery, or to help control symptoms, when it is clinically appropriate.",
-    icon: "Radiation",
+    image:
+      radiationOncology,
     path: "/services/radiation-oncology",
     detail: serviceDetailContent["radiation-oncology"],
   },
@@ -102,11 +116,69 @@ export const services = [
     title: "Patient Support",
     description:
       "Find guidance on appointments, treatment preparation, recovery, nutrition and emotional wellbeing for patients and families.",
-    icon: "HandHeart",
+    image:
+     patientSupport,
     path: "/services/patient-support",
     detail: serviceDetailContent["patient-support"],
   },
 ];
+
+// export const services = [
+//   {
+//     slug: "breast-cancer-screening",
+//     title: "Breast Cancer Screening",
+//     description:
+//       "Learn about mammography, clinical examinations and screening options that depend on age, risk and local guidance.",
+//     icon: "ScanSearch",
+//     path: "/services/breast-cancer-screening",
+//     detail: serviceDetailContent["breast-cancer-screening"],
+//   },
+//   {
+//     slug: "diagnostic-imaging",
+//     title: "Diagnostic Imaging",
+//     description:
+//       "Understand how mammography, ultrasound and, when indicated, MRI help clinicians look more closely at breast changes.",
+//     icon: "Activity",
+//     path: "/services/diagnostic-imaging",
+//     detail: serviceDetailContent["diagnostic-imaging"],
+//   },
+//   {
+//     slug: "surgical-oncology",
+//     title: "Surgical Oncology",
+//     description:
+//       "Explore breast-conserving surgery, mastectomy and oncoplastic approaches, chosen according to clinical need and preference.",
+//     icon: "HeartPulse",
+//     path: "/services/surgical-oncology",
+//     detail: serviceDetailContent["surgical-oncology"],
+//   },
+//   {
+//     slug: "medical-oncology",
+//     title: "Medical Oncology",
+//     description:
+//       "Learn about chemotherapy, hormone therapy and targeted medicines that may form part of an individual treatment plan.",
+//     icon: "Stethoscope",
+//     path: "/services/medical-oncology",
+//     detail: serviceDetailContent["medical-oncology"],
+//   },
+//   {
+//     slug: "radiation-oncology",
+//     title: "Radiation Oncology",
+//     description:
+//       "Understand how radiotherapy may be used after surgery, or to help control symptoms, when it is clinically appropriate.",
+//     icon: "Radiation",
+//     path: "/services/radiation-oncology",
+//     detail: serviceDetailContent["radiation-oncology"],
+//   },
+//   {
+//     slug: "patient-support",
+//     title: "Patient Support",
+//     description:
+//       "Find guidance on appointments, treatment preparation, recovery, nutrition and emotional wellbeing for patients and families.",
+//     icon: "HandHeart",
+//     path: "/services/patient-support",
+//     detail: serviceDetailContent["patient-support"],
+//   },
+// ];
 
 export function getServiceBySlug(slug) {
   return services.find((service) => service.slug === slug);
