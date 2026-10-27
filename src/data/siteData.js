@@ -1,6 +1,6 @@
 import { serviceDetailContent } from "./serviceDetails";
 import breastBanner from "../assets/home/breast-banner.png";
-import diagnosisBanner from "../assets/home/diagnosisBanner.jpg";
+import diagnosisBanner from "../assets/home/diagnosisBanner2.jpg";
 import treatmentBanner from "../assets/home/treatmentBanner3.jpg";
 
 import breastScreening from "../assets/home/breast-screening.jpg";
