@@ -24,62 +24,54 @@ export default function FloatingActions() {
     "Hello, I would like information about appointments."
   )}`;
 
-  return (
-    <>
-      {/* Desktop: WhatsApp above the action icons */}
-      <div className="fixed right-5 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-center gap-3 lg:flex">
-        <a
-          href={whatsappHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Chat with us on WhatsApp"
-          title="WhatsApp"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105"
+ return (
+  <>
+    {/* MOBILE AND TABLET: Keep the original bottom navigation */}
+    <div className="fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-line bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_25px_rgba(20,38,74,0.08)] backdrop-blur lg:hidden">
+      {actions.map(({ label, path, Icon }) => (
+        <Link
+          key={label}
+          to={path}
+          className="flex min-h-[64px] flex-col items-center justify-center gap-1 text-navy hover:bg-ice"
         >
-          <WhatsAppIcon />
-        </a>
+          <Icon size={22} />
+          <span className="text-[15px] font-semibold">{label}</span>
+        </Link>
+      ))}
+    </div>
 
-        {actions.map(({ label, path, Icon }) => (
-          <Link
-            key={label}
-            to={path}
-            title={label}
-            aria-label={label}
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-royal text-white shadow-premium transition hover:bg-royaldeep"
-          >
-            <Icon size={20} />
-          </Link>
-        ))}
-      </div>
+    {/* WINDOWS / DESKTOP: Three icons vertically above WhatsApp */}
+    <div className="fixed bottom-[88px] right-6 z-40 hidden flex-col gap-3 lg:flex">
+      {actions.map(({ label, path, Icon }) => (
+        <Link
+          key={label}
+          to={path}
+          title={label}
+          aria-label={label}
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-royal text-white shadow-premium transition hover:bg-royaldeep"
+        >
+          <Icon size={20} />
+        </Link>
+      ))}
+    </div>
 
-      {/* Mobile and tablet: WhatsApp above bottom navigation */}
-      <a
-        href={whatsappHref}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
-        title="WhatsApp"
-        className="fixed right-4 bottom-[calc(76px+env(safe-area-inset-bottom))] z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 lg:hidden"
-      >
-        <WhatsAppIcon />
-      </a>
-
-      {/* Mobile and tablet: bottom navigation */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-line bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_25px_rgba(20,38,74,0.08)] backdrop-blur lg:hidden">
-        {actions.map(({ label, path, Icon }) => (
-          <Link
-            key={label}
-            to={path}
-            className="flex min-h-[64px] flex-col items-center justify-center gap-1 text-navy transition hover:bg-ice"
-          >
-            <Icon size={22} />
-            <span className="text-[15px] font-semibold">{label}</span>
-          </Link>
-        ))}
-      </div>
-    </>
-  );
+    {/* WHATSAPP: Original position on desktop and above mobile navigation */}
+    <a
+      href={whatsappHref}
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat with us on WhatsApp"
+      title="WhatsApp"
+      className="fixed bottom-[calc(82px+env(safe-area-inset-bottom))] right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 lg:bottom-6 lg:right-6"
+    >
+      <WhatsAppIcon />
+    </a>
+  </>
+);
 }
+
+
+
 
 
 
